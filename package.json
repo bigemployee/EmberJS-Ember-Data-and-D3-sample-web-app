@@ -1,0 +1,12 @@
+{
+  "name": "stock-app",
+  "description": "Stock and Charts demo app using REST data calls",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-ember-templates": "*",
+    "grunt-contrib-uglify": "*"
+  }
+}

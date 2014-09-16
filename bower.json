@@ -1,0 +1,21 @@
+{
+    "name": "stock-app",
+    "version": "1.0.0",
+    "dependencies": {
+        "jquery": "~2.1.0",
+        "bootstrap": "~3.2.0",
+        "d3": "~3.4.9",
+        "ember": "~1.6",
+        "ember-data": "~1.0"
+    },
+    "authors": [
+        "Norik Davtian <norik@bigemployee.com>"
+    ],
+    "description": "Stock and Charts demo app using REST data calls",
+    "main": "index.html",
+    "license": "MIT",
+    "private": true,
+    "resolutions": {
+        "ember": "~1.6"
+    }
+}

@@ -1,0 +1,29 @@
+<h1><strong>{{Symbol}}</strong> <small>{{Name}}</small> <span class="price"><small>({{Change}})</small> ${{LastTradePriceOnly}}</span></h1>
+
+<ul class="nav nav-tabs" role="tablist">
+    {{#link-to "period" "1m" tagName="li" }}<a {{bind-attr href="view.href"}}>1M</a>{{/link-to}}
+    {{#link-to "period" "3m" tagName="li" }}<a {{bind-attr href="view.href"}}>3M</a>{{/link-to}}
+    {{#link-to "period" "6m" tagName="li" }}<a {{bind-attr href="view.href"}}>6M</a>{{/link-to}}
+    {{#link-to "period" "1y" tagName="li"}}<a  {{bind-attr href="view.href"}}>1Y</a>{{/link-to}}
+    {{#link-to "period" "5y" tagName="li" }}<a  {{bind-attr href="view.href"}}>5Y</a>{{/link-to}}
+    {{#link-to "period" "max" tagName="li"}}<a  {{bind-attr href="view.href"}}>Max</a>{{/link-to}}
+</ul>
+{{#view "App.GraphView" id="chart" classNames="tab-content"}}
+{{#if isLoading}}
+<p id="chart-loading"><span class="glyphicon glyphicon-refresh spin"></span> Loading...</p>
+{{/if}}
+{{/view}}
+
+<dl id="quote-details" class="dl-horizontal">
+    <dt>Last Trade Price</dt><dd>${{LastTradePriceOnly}}</dd>
+    <dt>Day's Range</dt><dd>${{DaysRange}}</dd>
+    <dt>Change</dt><dd>{{Change}}</dd>
+    <dt>Volume</dt><dd>{{Volume}}</dd>
+    <dt>Average Daily Volume</dt><dd>{{AverageDailyVolume}}</dd>
+    <dt>Day's Low</dt><dd>${{DaysLow}}</dd>
+    <dt>Day's High</dt><dd>${{DaysHigh}}</dd>
+    <dt>Year Low</dt><dd>${{YearLow}}</dd>
+    <dt>Year High</dt><dd>${{YearHigh}}</dd>
+    <dt>Market Capitalization</dt><dd>${{MarketCapitalization}}</dd>
+    <dt>Stock Exchange<dd>{{StockExchange}}</dd>
+</dl>

@@ -1,0 +1,25 @@
+<header class="navbar navbar-default">
+    <nav class="navbar-header" role="navigation">
+        {{#link-to "index" class="navbar-brand"}}Ember Stocks and Charts{{/link-to}}
+        {{#view "App.SearchView" tagName="form" classNames="navbar-form pull-right" role="search"}}
+        <div class="input-group">
+            <span class="input-group-addon">$
+                {{#if isSearching}}
+                <span class="glyphicon glyphicon-refresh spin"></span>
+                {{/if}}
+            </span>
+            {{input placeholder="Symbol Lookup" autocomplete="off" classNames="form-control" valueBinding="searchTerm"}}
+            <div id="search-results-list" class="list-group">
+                {{#each}}
+                {{#link-to "period" id "1m" class="list-group-item"}}
+                <strong>{{id}}</strong> - <small>{{name}}</small>
+                {{/link-to}}
+                {{/each}}
+            </div>
+            <div class="input-group-btn">
+                <button class="btn btn-default" {{action "search"}}><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+        </div>
+        {{/view}}
+    </nav>
+</header>

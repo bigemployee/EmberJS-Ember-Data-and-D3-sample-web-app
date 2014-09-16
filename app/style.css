@@ -1,0 +1,186 @@
+/*  style.css
+    Description: Custom styles for the app
+    Author     : Norik Davtian <norik@bigemployee.com>
+*/
+/* Navbar */
+header{
+    text-align: center;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+.navbar-header{
+    max-width: 800px;
+    float: none;
+    margin: 0 auto;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+.navbar-form{
+    margin: 8px 0 0;
+    border-bottom: 0 none;
+    position: relative;
+}
+.navbar-form input{
+    cursor: pointer;
+}
+#search-results-list{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    text-align: left;
+    top: 33px;
+    left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.input-group-addon,
+#quote{
+    position: relative;
+}
+#quote-details{
+    float: left;
+    width: 100%;
+}
+.spin {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 10;
+    padding: 4px;
+    border-radius: 4px;
+    color: #666;
+    background-color: #eee;
+    -webkit-animation: spin 0.5s infinite linear;
+    -moz-animation: spin 0.5s infinite linear;
+    -o-animation: spin 0.5s infinite linear;
+    animation: spin 0.5s infinite linear;
+}
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(359deg);
+    }
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+    }
+}
+@-o-keyframes spin {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        -o-transform: rotate(359deg);
+    }
+}
+@-ms-keyframes spin {
+    0% {
+        -ms-transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+/* Home */
+.jumbotron .btn{
+    margin-bottom: 5px;
+}
+/* Chart */
+.nav-tabs{
+    float: left;
+    width: 100%;
+    clear: both;
+    margin: 5px 0;
+}
+.nav-tabs > li > a {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+.grid line {
+    stroke: #ccc;
+}
+.grid line.minor {
+    stroke-opacity: .5;
+}
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+.area{
+    fill: #edf7ff;
+}
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+.focus circle {
+    fill: none;
+    stroke: steelblue;
+}
+#chart-loading{
+    position: absolute;
+    left: 0;
+    background: #fff;
+    line-height: 3.5em;
+}
+#chart-loading .spin{
+    position: relative;
+    top: 3px;
+    left: 0;
+    background: none;
+}
+#chart{
+    float: left;
+    width: 100%;
+    clear: both;
+    margin-bottom: 20px;
+}
+#chart svg{
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
+}
+.price{
+    float: right;
+    font-size: 0.8em;
+}
+/* Media Queries */
+@media (min-width: 768px) {
+    #chart svg{
+        font-size: 0.9em;
+    }
+    #quote-details{
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 30px;
+        -moz-column-gap: 30px;
+        column-gap: 30px;
+    }
+}
